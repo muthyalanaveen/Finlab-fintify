@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="volunteer_activism_black_24dp" transform="translate(0.000000, 0.500000)">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <g id="Group" transform="translate(1.000000, 2.000000)" fill="#000000" fill-rule="nonzero">
+                <path d="M15,11 C18.09,8.19 21,5.56 21,3.3 C21,1.45 19.55,0 17.7,0 C16.66,0 15.65,0.49 15,1.25 C14.34,0.49 13.34,0 12.3,0 C10.45,0 9,1.45 9,3.3 C9,5.56 11.91,8.19 15,11 Z M12.3,2 C12.74,2 13.19,2.21 13.48,2.55 L15,4.34 L16.52,2.55 C16.81,2.21 17.26,2 17.7,2 C18.44,2 19,2.56 19,3.3 C19,4.42 16.96,6.47 15,8.29 C13.04,6.47 11,4.41 11,3.3 C11,2.56 11.56,2 12.3,2 Z" id="Shape"></path>
+                <path d="M18,14 L16,14 C16,12.8 15.25,11.72 14.13,11.3 L7.97,9 L0,9 L0,20 L6,20 L6,18.56 L13,20.5 L21,18 L21,17 C21,15.34 19.66,14 18,14 Z M2,18 L2,11 L4,11 L4,18 L2,18 Z M12.97,18.41 L6,16.48 L6,11 L7.61,11 L13.43,13.17 C13.77,13.3 14,13.63 14,14 C14,14 12.01,13.95 11.7,13.85 L9.32,13.06 L8.69,14.96 L11.07,15.75 C11.58,15.92 12.11,16.01 12.65,16.01 L18,16.01 C18.39,16.01 18.74,16.24 18.9,16.57 L12.97,18.41 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

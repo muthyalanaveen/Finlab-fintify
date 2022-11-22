@@ -1,0 +1,29 @@
+steps:
+#install packages
+  - name: node:14
+    entrypoint: npm
+    args:
+      - install
+    id: install
+
+#lint
+  - name: node:14
+    entrypoint: npm
+    args:
+      - run
+      - lint
+    id: lint
+
+#unit tests
+  - name: node:14
+    entrypoint: npm
+    args:
+      - run
+      - test
+    id: tests
+
+tags:
+  - rousseau-ui-pr   
+
+options:
+  logging: CLOUD_LOGGING_ONLY  

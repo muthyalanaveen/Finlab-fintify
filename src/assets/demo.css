@@ -1,0 +1,49 @@
+
+.title {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  min-height: 32px;
+}
+
+#typography h1,
+#typography h2,
+#typography h3,
+#typography h4,
+#typography h5,
+#typography h6 {
+  margin-bottom: 0;
+}
+
+#buttons .md-button {
+  margin: 0 2px 15px;
+}
+
+
+.space-8 {
+  height: 8px;
+  display: block;
+  background-color: #e1e6fa;
+}
+.space-16 {
+  height: 16px;
+  display: block;
+  background-color: #e1e6fa;
+}
+.space-32 {
+  height: 32px;
+  display: block;
+  background-color: #e1e6fa;
+}
+.space-64 {
+  height: 64px;
+  display: block;
+  background-color: #e1e6fa;
+}
+.space-128 {
+  height: 128px;
+  display: block;
+  background-color: #e1e6fa;
+}
+
+
+

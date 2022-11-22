@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .p {
+  //font-family: $font-family-sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+h1,h2,h3,.h1,.h2,.h3{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h4,h5,h6,.h4,.h5,.h6{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1, .h1 {
+    font-size: $font-size-h1;
+    line-height: 1.15em;
+}
+h2, .h2{
+    font-size: $font-size-h2;
+    line-height: 1.5em;
+}
+h3, .h3{
+    font-size: $font-size-h3;
+    line-height: 1.4em;
+}
+h4, .h4{
+    font-size: $font-size-h4;
+    line-height: 1.5em;
+}
+h5, .h5 {
+    font-size: $font-size-h5;
+    line-height: 1.55em;
+    margin-bottom: 15px;
+}
+h6, .h6{
+    font-size: $font-size-h6;
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+}
+
+p{
+    font-size: $font-paragraph;
+    margin: 0 0 1px;
+}
+
+h2.title{
+    margin-bottom: $margin-base * 2;
+}
+
+.title,
+.card-title,
+.info-title,
+.footer-brand,
+.footer-big h5,
+.footer-big h4,
+.media .media-heading{
+    font-weight: $font-weight-extra-bold;
+    font-family: $font-family-serif;
+
+    &,
+    a{
+        color: $black-color;
+        text-decoration: none;
+    }
+}
+
+.description,
+.card-description,
+.footer-big p{
+    color: $gray-light;
+}
+
+.text-warning {
+  color: $brand-warning !important;
+}
+.text-primary {
+  color: $brand-primary !important;
+}
+.text-danger {
+  color: $brand-danger !important;
+}
+.text-success {
+  color: $brand-success !important;
+}
+.text-info {
+  color: $brand-info !important;
+}
+.text-gray{
+  color: $gray-color !important;
+}
+.text-muted {
+  color: #6c757d!important;
+}
+
+
+.text-primary-3xl {
+  font-family: 'Inter', sans-serif;
+
+  color: $primary-default !important;
+  font-size: $font-size-3xl;
+  text-transform: none;
+  line-height: 3em;
+}
+
+.text-primary-3xl-bold {
+  color: $primary-default !important;
+  font-size: $font-size-3xl;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 3em;
+}
+
+.text-secondary-3xl {
+  color: $secondary-default !important;
+  font-size: $font-size-3xl;
+  text-transform: none;
+  line-height: 3em;
+}
+
+.text-secondary-3xl-bold {
+  color: $secondary-default !important;
+  font-size: $font-size-3xl;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 3em;
+}
+
+.text-primary-2xl {
+  font-family: 'Inter', sans-serif;
+
+  color: $primary-default !important;
+  font-size: $font-size-2xl;
+  text-transform: none;
+  line-height: 2.5em;
+}
+
+.text-primary-2xl-bold {
+  color: $primary-default !important;
+  font-size: $font-size-2xl;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 2.5em;
+}
+
+.text-secondary-2xl {
+  color: $secondary-default !important;
+  font-size: $font-size-2xl;
+  text-transform: none;
+  line-height: 2.5em;
+}
+
+.text-secondary-2xl-bold {
+  color: $secondary-default !important;
+  font-size: $font-size-2xl;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 2.5em;
+}
+
+.text-primary-xl {
+  font-family: 'Inter', sans-serif;
+
+  color: $primary-default !important;
+  font-size: $font-size-xl;
+  text-transform: none;
+  line-height: 1.75em;
+}
+
+.text-primary-xl-bold {
+  color: $primary-default !important;
+  font-size: $font-size-xl;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.75em;
+}
+
+.text-secondary-xl {
+  color: $secondary-default !important;
+  font-size: $font-size-xl;
+  text-transform: none;
+  line-height: 1.75em;
+}
+
+.text-secondary-xl-bold {
+  color: $secondary-default !important;
+  font-size: $font-size-xl;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.75em;
+}
+
+.text-primary-lg {
+  font-family: 'Inter', sans-serif;
+
+  color: $primary-default !important;
+  font-size: $font-size-lg;
+  text-transform: none;
+  line-height: 1.5em;
+}
+
+.text-primary-lg-bold {
+  color: $primary-default !important;
+  font-size: $font-size-lg;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.5em;
+}
+
+.text-secondary-lg {
+  color: $secondary-default !important;
+  font-size: $font-size-lg;
+  text-transform: none;
+  line-height: 1.5em;
+}
+
+.text-secondary-lg-bold {
+  color: $secondary-default !important;
+  font-size: $font-size-lg;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.5em;
+}
+
+.text-primary-base {
+  font-family: 'Inter', sans-serif;
+
+  color: $primary-default !important;
+  font-size: $font-size-base;
+  text-transform: none;
+  line-height: 1.25em;
+}
+
+.text-primary-base-bold {
+  color: $primary-default !important;
+  font-size: $font-size-base;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.25em;
+}
+
+.text-secondary-base {
+  color: $secondary-default !important;
+  font-size: $font-size-base;
+  text-transform: none;
+  line-height: 1.25em;
+}
+
+.text-secondary-base-bold {
+  color: $secondary-default !important;
+  font-size: $font-size-base;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.25em;
+}
+
+.text-primary-sm {
+  font-family: 'Inter', sans-serif;
+
+  color: $primary-default !important;
+  font-size: $font-size-sm;
+  text-transform: none;
+  line-height: 1.25em;
+}
+
+.text-primary-sm-bold {
+  color: $primary-default !important;
+  font-size: $font-size-sm;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.25em;
+}
+
+.text-secondary-sm {
+  color: $secondary-default !important;
+  font-size: $font-size-sm;
+  text-transform: none;
+  line-height: 1.25em;
+}
+
+.text-secondary-sm-bold {
+  color: $secondary-default !important;
+  font-size: $font-size-sm;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1.25em;
+}
+
+.text-primary-xs {
+  font-family: 'Inter', sans-serif;
+
+  color: $primary-default !important;
+  font-size: $font-size-xs;
+  text-transform: none;
+  line-height: 1em;
+}
+
+.text-primary-xs-bold {
+  color: $primary-default !important;
+  font-size: $font-size-xs;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1em;
+}
+
+.text-secondary-xs {
+  color: $secondary-default !important;
+  font-size: $font-size-xs;
+  text-transform: none;
+  line-height: 1em;
+}
+
+.text-secondary-xs-bold {
+  color: $secondary-default !important;
+  font-size: $font-size-xs;
+  text-transform: none;
+  font-weight: $font-weight-extra-bold;
+  line-height: 1em;
+}

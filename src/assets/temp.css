@@ -1,0 +1,39 @@
+.headingSubTitle {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4em;
+    text-transform: none;
+    color: #545454;
+}
+
+.headingSubTitleBoldPrimary {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.4em;
+  text-transform: none;
+}
+
+.textFieldTitle {
+  font-size: 13px;
+  line-height: 20px;
+  color: '#545454';
+  text-transform: none
+}
+
+.headingSubTitleSmallPlain {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.0em;
+  text-transform: none;
+}
+
+.headingSubTitleSmallBold {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.0em;
+  text-transform: none;
+}
+
+.bg-well {
+  background: #f6f6f6;
+}

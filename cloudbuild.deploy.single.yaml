@@ -1,0 +1,42 @@
+steps:
+  - name: node:14
+    entrypoint: npm
+    args:
+      - install
+    id: install
+
+  - name: node:14
+    entrypoint: npm
+    args:
+      - run
+      - lint
+    id: lint
+
+  - name: node:14
+    entrypoint: bash
+    env:
+      - 'VUE_APP_BUILD_VERSION=$TAG_NAME - $SHORT_SHA'
+      - 'VUE_APP_API_URL=${_VUE_APP_API_URL}'
+      - 'VUE_APP_ENVIRONMENT=${_VUE_APP_ENVIRONMENT}'
+      - 'VUE_APP_OPTITURN_ID=${_VUE_APP_OPTITURN_ID}'
+    args:
+      - '-c'
+      - |
+          mkdir /workspace/build-configs
+          npm run generate-build-file -- ${_VUE_APP_OPTITURN_ID};
+
+  - name: gcr.io/cloud-builders/gcloud
+    args:
+      - builds
+      - submit
+      - --config
+      - /workspace/build-configs/cloudbuild.deploy.${_VUE_APP_OPTITURN_ID}.yaml
+      - .
+      - --async
+
+tags:
+  - rousseau-ui-deploy-generator
+  - rousseau-ui-deploy-generator-single
+  - '$TAG_NAME-$SHORT_SHA'
+options:
+  logging: CLOUD_LOGGING_ONLY

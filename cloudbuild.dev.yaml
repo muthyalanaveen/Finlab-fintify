@@ -1,0 +1,67 @@
+steps:
+#install packages
+  - name: node:14
+    entrypoint: npm
+    args:
+      - install
+    id: install
+
+#lint
+  - name: node:14
+    entrypoint: npm
+    args:
+      - run
+      - lint
+    id: lint
+
+#build    
+  - name: node:14
+    entrypoint: npm
+    env:
+      - 'VUE_APP_BUILD_VERSION=$BRANCH_NAME - $SHORT_SHA'
+      - 'VUE_APP_API_URL=${_VUE_APP_API_URL}'
+      - 'VUE_APP_OPTITURN_ID=${_VUE_APP_OPTITURN_ID}'
+      - 'VUE_APP_TITLE=${_VUE_APP_TITLE}'
+      - 'VUE_APP_MAPS_API_KEY=${_VUE_APP_MAPS_API_KEY}'
+      - 'VUE_APP_LOGIN_REQUIRED=${_VUE_APP_LOGIN_REQUIRED}'
+      - 'VUE_APP_SECURE_TEXT=${_VUE_APP_SECURE_TEXT}'
+    args:
+      - run
+      - build
+    waitFor:
+      - lint
+    id: build
+
+#publish
+  - name: gcr.io/cloud-builders/gsutil
+    args: ['-m', 'rsync', '-r', '-c', '-d', 'dist', '${_BUCKET_NAME}']
+    waitFor:
+      - build
+    id: publish
+
+#set index
+  - name: gcr.io/cloud-builders/gsutil
+    args: ['web', 'set', '-m', 'index.html', '-e', 'index.html', '${_BUCKET_NAME}']
+    waitFor:
+      - publish
+    id: set-index
+
+# cache control
+  - name: gcr.io/cloud-builders/gsutil
+    args: 
+      - '-m'
+      - setmeta
+      - '-h'
+      - 'Content-Type:text/html'
+      - '-h'
+      - 'Cache-Control:private, max-age=0, no-transform'  
+      - '${_BUCKET_NAME}/*.html'
+    waitFor:
+      - publish
+    id: cache-control
+
+tags:
+  - rousseau-ui-dev    
+
+options:
+  logging: CLOUD_LOGGING_ONLY  
