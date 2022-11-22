@@ -1,4 +1,4 @@
-# rousseau-ui
+# finitify
 
 ## Project setup
 ```
