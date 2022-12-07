@@ -40,7 +40,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import OText from '@/components/atoms/OText.vue'
 
 export default {
@@ -76,7 +75,6 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({ order: 'order/order' })
 
   }
 }

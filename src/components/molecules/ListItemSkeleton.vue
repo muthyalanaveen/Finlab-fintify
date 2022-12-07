@@ -26,7 +26,6 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 export default {
   name: 'ListItemSkeleton',
   components: {
@@ -43,7 +42,6 @@ export default {
     }
   },
   computed: {
-    ...mapGetters({ order: 'order/order' })
   }
 }
 </script>

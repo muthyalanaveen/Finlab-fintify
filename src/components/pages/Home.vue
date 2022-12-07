@@ -27,16 +27,25 @@
         >
           <v-form @keyup.enter="lookupOrder">
             <header-title>
-              {{ this.RETURN_AND_TRACK_ORDERS }}
+              Login and password
             </header-title>
             <o-text-field
-              :title="ENTER_ORDER_ID"
+              title="Enter username"
               id="orderId"
               class="regularWt medium"
               @onChange="onChange($event)"
               @onKeyEnter="lookupOrder"
               @onPaste="onPaste($event)"
-              :placeholder="ENTER_ORDER_ID_PLACEHOLDER"
+              placeholder="Enter username"
+            />
+            <o-text-field
+              title="Enter password"
+              id="orderId"
+              class="regularWt medium"
+              @onChange="onChange($event)"
+              @onKeyEnter="lookupOrder"
+              @onPaste="onPaste($event)"
+              placeholder="Enter password"
             />
             <action-button
               @click.prevent="lookupOrder"
@@ -44,10 +53,9 @@
               primary-color
               :disabled="isDisabled"
               block
-              aria-label="Go to Zip Code Entry Page"
               x-large
             >
-              {{ NEXT }}
+              Submit
             </action-button>
 
             <div
@@ -75,7 +83,7 @@
                   text
                   v-show="this.howItWorksEnabled"
                 >
-                  {{ HOW_IT_WORKS }}
+                  Forgot username or password
                 </action-button>
                 <HowItWorksView
                   :visible="showHowItWorks"

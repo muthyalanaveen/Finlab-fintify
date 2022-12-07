@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from '@/components/pages/Home.vue'
 import PageNotFound from '@/components/pages/PageNotFound.vue'
-
+import Landing from '@/components/pages/Landing.vue'
 import { PAGE_TITLES } from 'branding/strings.json'
 
 Vue.use(VueRouter)
@@ -14,7 +14,15 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: PAGE_TITLES.ORDER_LOOKUP
+      title: 'Home'
+    }
+  },
+  {
+    path: '/',
+    name: 'Landing',
+    component: Landing,
+    meta: {
+      title: 'Landing'
     }
   },
   {
