@@ -18,8 +18,8 @@ const routes = [
     }
   },
   {
-    path: '/',
-    name: 'Landing',
+    path: '/landing',
+    name: 'landing',
     component: Landing,
     meta: {
       title: 'Landing'

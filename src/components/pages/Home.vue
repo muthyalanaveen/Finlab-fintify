@@ -104,12 +104,8 @@ import heroImage from 'branding/assets/images/hero.png'
 import HeroImage from '@/components/molecules/HeroImage.vue'
 import OTextField from '@/components/molecules/OTextField.vue'
 import ActionButton from '@/components/atoms/ActionButton.vue'
-import { validateOrderId } from '@/utils'
-import { ORDER_LOOKUP, PAGE_TITLES } from 'branding/strings.json'
-import { HERO_DISABLED, howItWorksEnabled } from 'branding/config.json'
-import { GET_CONFIG } from '@/store/constants.js'
+import { HERO_DISABLED } from 'branding/config.json'
 import HeaderTitle from '../molecules/HeaderTitle.vue'
-import { setGiftEmail, setIsGift } from '@/store/sessionStorage.js'
 
 export default {
   name: 'Home',
@@ -122,48 +118,17 @@ export default {
   },
   data () {
     return {
-      orderId: '',
       isDisabled: true,
       showHowItWorks: false,
       heroImage,
-      RETURN_AND_TRACK_ORDERS: ORDER_LOOKUP.RETURN_AND_TRACK_ORDERS,
-      ENTER_ORDER_ID: ORDER_LOOKUP.ENTER_ORDER_ID,
-      ENTER_ORDER_ID_PLACEHOLDER: ORDER_LOOKUP.ENTER_ORDER_ID_PLACEHOLDER,
-      RETURN_A_GIFT: ORDER_LOOKUP.RETURN_A_GIFT,
-      HOW_IT_WORKS: ORDER_LOOKUP.HOW_IT_WORKS,
-      NEXT: ORDER_LOOKUP.NEXT,
-      HERO_DISABLED: HERO_DISABLED,
-      isGiftAllowed: false,
-      howItWorksEnabled: howItWorksEnabled
+      HERO_DISABLED: HERO_DISABLED
     }
   },
   mounted () {
-    this.orderId = ''
-    this.$store.commit('ui/updateOrderId', '')
-    this.$store
-      .dispatch('order/' + GET_CONFIG, null)
-      .then((response) => {
-        if (response) {
-          this.isGiftAllowed = response?.gift_returns_allowed
-        }
-      })
-      .catch((err) => {
-        console.error({ err })
-      })
   },
   methods: {
-    validate (value) {
-      this.orderId = value
-      this.isDisabled = !validateOrderId(value)
-    },
-    toggleHowItWorks (opening) {
-      if (opening) {
-        this.showHowItWorks = true
-        document.title = PAGE_TITLES.HOW_IT_WORKS
-      } else {
-        this.showHowItWorks = false
-        document.title = PAGE_TITLES.ORDER_LOOKUP
-      }
+    validate () {
+      this.isDisabled = false
     },
     onChange (event) {
       this.validate(event.target.value)
@@ -172,19 +137,7 @@ export default {
       this.validate(event.clipboardData.getData('text/plain'))
     },
     async lookupOrder () {
-      this.$store.commit('ui/updateOrderId', this.orderId)
-      this.$router.push('/zipcode')
-      setIsGift(false)
-      setGiftEmail('')
-    },
-    onGiftReturnClick () {
-      setIsGift(true)
-      if (validateOrderId(this.orderId)) {
-        this.$store.commit('ui/updateOrderId', this.orderId)
-        this.$router.push('/email')
-      } else {
-        this.$router.push('/order')
-      }
+      this.$router.push('/Landing')
     }
   }
 }
